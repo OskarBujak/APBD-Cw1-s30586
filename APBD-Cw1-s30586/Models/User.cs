@@ -10,4 +10,10 @@ public abstract class User(string firstName, string lastName)
     public string FirstName { get; set; } = firstName;
     public string LastName { get; set; } = lastName;
     public abstract UserTypes UserType { get; }
+    public int MaxReservations => UserType switch
+    {
+        UserTypes.Student => 2,
+        UserTypes.Employee => 5,
+        _ => 0 
+    };
 }

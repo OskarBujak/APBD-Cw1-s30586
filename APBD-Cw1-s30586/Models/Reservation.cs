@@ -11,7 +11,7 @@ public class Reservation(User user,Equipment equipment,DateTime from, DateTime t
     public DateTime To { get; set; } = to;
 
     public DateTime? ReturnTime;
-    public double? PenaltyValue;
+    public double PenaltyValue = 0;
 
     public bool WasReturnerOnTime()
     {
