@@ -10,4 +10,9 @@ public abstract class Equipment(string name, string manufacturer, string descrip
     public string Description { get; set; } = description;
     
     public bool IsAvailable { get; set; } = true;
+
+    public override string ToString()
+    {
+        return $"ID: {Id} | Name: {Name} | Manufacturer: {Manufacturer} | Available: {(IsAvailable ? "Yes" : "No")} | Desc: {Description}";
+    }
 }
