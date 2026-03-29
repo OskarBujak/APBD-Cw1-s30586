@@ -54,7 +54,7 @@ public class ReservationService : IReservationService
         {
             CancelReservation(reservation);
         }
-        else if (returnDate < reservation.To)
+        else if (returnDate <= reservation.To)
         {
             reservation.IsActive = false;
             reservation.ReturnTime = returnDate;
