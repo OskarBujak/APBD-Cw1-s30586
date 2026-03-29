@@ -2,7 +2,13 @@
 
 public interface IEquipmentService
 {
-    public void addEquipment(Equipment equipment);
-    public void listEquipment();
-    public void listAvailableEquipment();
+    public void AddEquipment(Equipment equipment);
+    public void WriteEquipment();
+    public void WriteAvailableEquipment();
+    public Equipment GetEquipmentById(int id);
+    public List<Equipment> GetAllEquipments();
+    public List<Equipment> GetAllAvailableEquipments();
+    public void SetUnavaliable(Equipment equipment);
+    public void SetAvailable(Equipment equipment);
+    public void WriteReport();
 }
